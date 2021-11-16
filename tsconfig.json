@@ -22,6 +22,6 @@
   "awesomeTypescriptLoaderOptions": {
     "useCache": true
   },
-  "include": ["src"],
+  "include": ["src", "additional.d.ts"],
   "exclude": ["**/node_modules", "**/.*/"]
 }
