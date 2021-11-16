@@ -9,14 +9,23 @@
   },
   "dependencies": {
     "next": "12.0.4",
+    "next-compose-plugins": "^2.2.1",
+    "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@types/node": "16.11.7",
     "@types/react": "17.0.35",
-    "eslint": "7",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^15.0.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
     "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-react": "^7.27.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.4.1",
     "typescript": "4.4.4"
   }
 }
