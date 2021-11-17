@@ -4,13 +4,14 @@ const HeaderData = [
     label: "Accueil",
   },
   {
-    path: "services",
+    path: "features",
     label: "Fonctionnalités",
   },
   {
-    path: "pricing",
-    label: "Prix",
+    path: "objectives",
+    label: "Objectifs",
   },
+
   {
     path: "testimonials",
     label: "Témoignages",

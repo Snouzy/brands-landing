@@ -7,8 +7,12 @@ import { StickyProvider } from "contexts/app/app.provider";
 import SEO from "components/seo";
 import Layout from "components/layout";
 
-import theme from "theme";
 import Banner from "sections/banner";
+import Services from "sections/services";
+import Featured from "sections/featured";
+import Subscribe from "sections/subscribe";
+
+import theme from "theme";
 
 import type { NextPage } from "next";
 
@@ -20,6 +24,9 @@ const Home: NextPage = () => {
           <Layout>
             <SEO title="Vazee BRANDS" />
             <Banner />
+            <Services />
+            <Featured />
+            <Subscribe />
           </Layout>
         </ThemeProvider>
       </StickyProvider>

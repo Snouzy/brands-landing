@@ -12,7 +12,6 @@ import bannerIcon4 from "assets/banner-icon-1-4.svg";
 import bannerIcon5 from "assets/banner-icon-1-5.svg";
 import bannerIcon6 from "assets/banner-icon-1-6.svg";
 import bannerIcon7 from "assets/dot-pattern.svg";
-import { NONAME } from "dns";
 
 const Banner = () => {
   return (
@@ -62,7 +61,9 @@ const Banner = () => {
         />
 
         <Image sx={styles.logo} src={logoImage} alt="logo image" />
-        <Heading as="h2">Pilotez, visualisez et optimisez vos données.</Heading>
+        <Heading as="h2">
+          Créez, pilotez, analysez et optimisez vos données.
+        </Heading>
         <Image src={bannerImage} sx={styles.bannerImage} alt="banner moc" />
       </Container>
     </Box>
