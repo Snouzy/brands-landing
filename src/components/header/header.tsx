@@ -53,7 +53,7 @@ export default function Header({ className }: { className: string }) {
 
 const styles = {
   headerBtn: {
-    backgroundColor: "black",
+    backgroundColor: "primary",
     fontSize: "16px",
     fontWeight: "bold",
     letterSpacing: "-0.16px",
@@ -109,7 +109,10 @@ const styles = {
       ":last-child": {
         mr: "0",
       },
-      "&:hover, &.active": {
+      "&.active": {
+        color: "primary",
+      },
+      "&:hover": {
         color: "primary",
       },
     },

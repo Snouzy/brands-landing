@@ -11,6 +11,7 @@ import Banner from "sections/banner";
 import Services from "sections/services";
 import Featured from "sections/featured";
 import Subscribe from "sections/subscribe";
+import Pricing from "sections/pricing";
 
 import theme from "theme";
 
@@ -25,7 +26,9 @@ const Home: NextPage = () => {
             <SEO title="Vazee BRANDS" />
             <Banner />
             <Services />
+            <Subscribe />
             <Featured />
+            <Pricing />
             <Subscribe />
           </Layout>
         </ThemeProvider>

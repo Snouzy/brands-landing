@@ -11,8 +11,8 @@ const theme: Theme = {
     background: "#FFFFFF", // body background color
     background_secondary: "#F9FBFD", // secondary background color
     border_color: "#E9EDF5", // border color
-    primary: "#8D448B", // primary button and link color
-    secondary: "#793677", // secondary color - can be used for hover states
+    primary: "#5FABCE", // primary button and link color
+    secondary: "#343D48", // secondary color - can be used for hover states
     black: "#0F2137", // black color
     gray: "#F8FAFC",
     muted: "#7B8188", // muted color
