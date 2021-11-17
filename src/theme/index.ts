@@ -1,4 +1,6 @@
-const theme = {
+import { Theme } from "theme-ui";
+
+const theme: Theme = {
   // example colors with dark mode
   breakpoints: ["376px", "576px", "768px", "992px", "1200px", "1650px"],
   colors: {
@@ -56,7 +58,7 @@ const theme = {
     toolbar: {
       display: "flex",
       alignItems: "center",
-      // justifyContent: 'space-between',
+      justifyContent: "space-between",
     },
     main: {},
     footer: {
@@ -186,9 +188,9 @@ const theme = {
       margin: "-1px !important",
       overflow: "hidden !important",
       padding: "0 !important",
-      position: "absolute !important",
+      // position: "absolute !important",
       width: "1px !important",
-      whiteSpace: "nowrap !important",
+      // whiteSpace: "nowrap !important",
     },
   },
 };
