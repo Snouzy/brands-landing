@@ -13,6 +13,7 @@ import Layout from "components/layout";
 import Banner from "sections/banner";
 import Featured from "sections/featured";
 import Subscribe from "sections/subscribe";
+import Services from "sections/services";
 
 import theme from "theme";
 
@@ -26,6 +27,7 @@ const Home: NextPage = () => (
         <SEO title="Vazee BRANDS" />
         <Banner />
         <Subscribe />
+        <Services />
         <Featured />
       </Layout>
       <ToastContainer autoClose={TOAST_AUTOCLOSE} closeOnClick />
