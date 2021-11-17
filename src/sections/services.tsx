@@ -23,9 +23,8 @@ const Services = () => {
           size={80}
           sx={{
             padding: 10,
-            background: "#F03641",
-            borderRadius: "20%",
-            fill: "white",
+
+            fill: "#d4e8f2",
           }}
         />
       ),
@@ -39,9 +38,8 @@ const Services = () => {
           size={80}
           sx={{
             padding: 10,
-            background: "#7530CC",
-            borderRadius: "20%",
-            fill: "white",
+
+            fill: "#d4e8f2",
           }}
         />
       ),
@@ -55,9 +53,8 @@ const Services = () => {
           size={80}
           sx={{
             padding: 10,
-            background: "#345DEE",
-            borderRadius: "20%",
-            fill: "white",
+
+            fill: "#d4e8f2",
           }}
         />
       ),
@@ -71,9 +68,8 @@ const Services = () => {
           size={80}
           sx={{
             padding: 10,
-            background: "#FF7E47",
-            borderRadius: "20%",
-            fill: "white",
+
+            fill: "#d4e8f2",
           }}
         />
       ),
@@ -84,12 +80,12 @@ const Services = () => {
       path: "#",
       icon: (
         <HiOutlineIdentification
-          size={80}
+          size={90}
           sx={{
             padding: 10,
-            background: "#48A7FF",
+            stroke: "white",
             borderRadius: "20%",
-            fill: "white",
+            fill: "#d4e8f2",
             path: {
               strokeWidth: "1px",
             },
@@ -106,9 +102,8 @@ const Services = () => {
           size={80}
           sx={{
             padding: 10,
-            background: "#F5497C",
-            borderRadius: "20%",
-            fill: "white",
+            stroke: "white",
+            fill: "#d4e8f2",
             strokeWidth: 0.7,
           }}
         />
