@@ -6,16 +6,17 @@ import { Link } from "components/link";
 import arrowAngle from "assets/arrow-angle.svg";
 
 interface Props {
-  image: string;
   text: string;
   heading: string;
   path: string;
+  icon: JSX.Element;
 }
-const ServiceCard = ({ image, text, heading, path }: Props) => {
+const ServiceCard = ({ text, heading, path, icon }: Props) => {
   return (
     <Box sx={styles.serviceCard}>
       <Box sx={styles.image}>
-        <Image src={image} alt={heading} />
+        {icon}
+        {/* <Image src={image} alt={heading} /> */}
       </Box>
       <Box sx={styles.content}>
         <h3 sx={{ marginBottom: 10 }}>{heading}</h3>
