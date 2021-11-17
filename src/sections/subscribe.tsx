@@ -1,5 +1,6 @@
 /** @jsxImportSource theme-ui */
 
+import React, { ChangeEvent, FormEvent } from "react";
 import {
   Button,
   Input,
@@ -10,23 +11,53 @@ import {
   ThemeUICSSObject,
 } from "theme-ui";
 
+import * as AppActions from "contexts/app/app.actions";
+import { useAppContext } from "contexts/app/app.provider";
+import { REGEXS } from "validators/regex";
+
 const Subscribe = () => {
+  const [email, setEmail] = React.useState<string>("");
+  const { dispatch, state } = useAppContext();
+  const handleSubmit = React.useCallback(
+    (e: FormEvent<HTMLDivElement>) => {
+      e.preventDefault();
+
+      AppActions.setEmail(email, dispatch);
+    },
+    [email]
+  );
+
+  const handleChange = React.useCallback(
+    (e: ChangeEvent<HTMLInputElement>): void => {
+      setEmail(e.currentTarget.value);
+    },
+    [email]
+  );
+
   return (
     <Box as="section" sx={styles.subscribe}>
       <Container>
         <Heading as="h3">Soyez informé du lancement officiel</Heading>
         <Text as="p">Et bénéficiez de 20% de réduction à vie !</Text>
-        <Box as="form" sx={styles.form}>
+        <Box as="form" sx={styles.form} onSubmit={handleSubmit}>
           <Box as="label" variant="styles.srOnly">
             Email
           </Box>
           <Input
             placeholder="Entrez votre email"
+            value={email}
+            onChange={handleChange}
             type="email"
             id="subscribeEmail"
             sx={styles.input}
           />
-          <Button type="submit" sx={styles.button}>
+          <Button
+            type="submit"
+            sx={styles.button}
+            disabled={
+              !REGEXS.email.test(email) || state.emailStatus === "pending"
+            }
+          >
             Envoyer
           </Button>
         </Box>
@@ -85,6 +116,7 @@ const styles: Record<string, ThemeUICSSObject> = {
     textAlign: ["center", null, null, "left"],
 
     "&::placeholder": {
+      opacity: 0.7,
       color: "gray",
     },
   },
@@ -101,7 +133,14 @@ const styles: Record<string, ThemeUICSSObject> = {
     width: ["100%", null, null, "auto"],
     mt: ["10px", null, null, "0"],
     mx: ["auto", null, null, "0"],
-    "&:hover": {
+    "&:disabled": {
+      color: "#fff",
+      opacity: 0.5,
+      background: "rgba(255,255,255, .50)",
+      cursor: "not-allowed",
+    },
+    "&:hover:not(:disabled)": {
+      color: "text",
       backgroundColor: "#fff",
       opacity: "0.8",
     },
