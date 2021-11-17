@@ -5,8 +5,9 @@ import { Box, Container, Button, ThemeUICSSObject } from "theme-ui";
 import { keyframes } from "@emotion/react";
 import BlockTitle from "components/block-title";
 import Image from "components/image";
-import { AiFillDollarCircle, AiFillPieChart } from "react-icons/ai";
-import { FaCog } from "react-icons/fa";
+import { AiOutlineLineChart } from "react-icons/ai";
+import { MdTouchApp } from "react-icons/md";
+import { FaEye } from "react-icons/fa";
 import tabImage1 from "assets/tab-image-1.png";
 import tabImage2 from "assets/tab-image-2.png";
 import tabImage3 from "assets/tab-image-3.png";
@@ -28,11 +29,11 @@ const Featured = () => {
   };
 
   return (
-    <Box as="section" sx={styles.featured}>
+    <Box as="section" id="objectives" sx={styles.featured}>
       <Container sx={styles.container}>
         <BlockTitle
           title="Les différents objectifs"
-          text="Définissez les votres en quelques clics  !"
+          text="Pilotez les votres en quelques clics  !"
         />
         <Box sx={styles.tabButtonTopWrapper}>
           <Box sx={styles.tabButtonWrapper}>
@@ -40,21 +41,21 @@ const Featured = () => {
               onClick={() => handleTab("media")}
               className={`${tab === "media" ? "active" : ""}`}
             >
-              <AiFillDollarCircle />
+              <FaEye />
               Media
             </Button>
             <Button
               onClick={() => handleTab("data")}
               className={`${tab === "data" ? "active" : ""}`}
             >
-              <FaCog />
+              <AiOutlineLineChart />
               Data
             </Button>
             <Button
               onClick={() => handleTab("activation")}
               className={`${tab === "activation" ? "active" : ""}`}
             >
-              <AiFillPieChart />
+              <MdTouchApp />
               Activation
             </Button>
           </Box>

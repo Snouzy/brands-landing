@@ -14,38 +14,38 @@ import serviceImage6 from "assets/service-6.png";
 const SERVICES_DATA = [
   {
     image: serviceImage1,
-    text: "Créer des campagnes basées sur vos envies, vos disponibilités et votre budget.",
+    text: "des campagnes basées sur vos envies, vos disponibilités et votre budget.",
     heading: "Créer",
     path: "#",
   },
   {
     image: serviceImage2,
-    text: "Consulter, monitorer et suivre en temps réel les chiffres générés par vos campagnes.",
+    text: "monitorer et suivre en temps réel les chiffres générés par vos campagnes.",
     heading: "Consulter",
     path: "#",
   },
   {
     image: serviceImage3,
-    text: "Cibler astucieusement des points de vente grâce à différents critères de ciblage.",
+    text: "astucieusement des points de vente grâce à différents critères de ciblage.",
     heading: "Cibler",
     path: "#",
   },
   {
     image: serviceImage4,
-    text: "Analyser : vous, vos points de vente, vos consommateurs et comprenez ce marché disparate.",
+    text: "vous, vos points de vente, vos consommateurs et comprenez ce marché disparate.",
     heading: "Analyser",
     path: "#",
   },
   {
     image: serviceImage5,
-    text: "Identifier les opportunités qui correspondent à votre marque et votre stratégie.",
+    text: "les opportunités qui correspondent à votre marque et votre stratégie.",
     heading: "Identifier",
     path: "#",
   },
   {
     image: serviceImage6,
-    text: "Opitmiser votre croissance en tirant profit des analyses et datas inédites à votre disposition.",
-    heading: "Optimisez",
+    text: "votre croissance en tirant profit des analyses et datas inédites à votre disposition.",
+    heading: "Optimiser",
     path: "#",
   },
 ];
@@ -75,6 +75,7 @@ export default Services;
 const styles = {
   services: {
     pt: ["80px", null, null, null, "80px", null, "100px"],
+    pb: ["80px", null, null, null, "80px", "100px", "140px"],
   },
   grid: {
     gridGap: "30px",

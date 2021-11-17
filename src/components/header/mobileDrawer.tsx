@@ -149,7 +149,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     py: "0",
-    backgroundColor: "black",
+    backgroundColor: "primary",
     color: "#fff",
   },
 };

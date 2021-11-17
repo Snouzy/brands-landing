@@ -18,8 +18,8 @@ const ServiceCard = ({ image, text, heading, path }: Props) => {
         <Image src={image} alt={heading} />
       </Box>
       <Box sx={styles.content}>
-        <h3>{heading}</h3>
-        <p>{text}</p>
+        <h3 sx={{ marginBottom: 10 }}>{heading}</h3>
+        <p sx={{ margin: 0 }}>{text}</p>
         {path.length > 0 && path !== "#" && (
           <Link sx={styles.link} path={path} label="path">
             En savoir plus <Image src={arrowAngle} alt="angle icon" />
@@ -35,6 +35,7 @@ export default ServiceCard;
 const styles: Record<string, ThemeUICSSObject> = {
   serviceCard: {
     display: "flex",
+    alignItems: "center",
     flexDirection: ["column", null, null, "row"],
     textAlign: ["center", null, null, "left"],
   },
@@ -54,7 +55,6 @@ const styles: Record<string, ThemeUICSSObject> = {
       fontSize: "16px",
       lineHeight: 1.87,
       color: "#343D48",
-      mt: "20px",
       mb: "20px",
     },
   },

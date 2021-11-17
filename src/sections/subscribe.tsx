@@ -40,7 +40,7 @@ export default Subscribe;
 const styles: Record<string, ThemeUICSSObject> = {
   subscribe: {
     py: ["80px", null, null, null, "80px", "100px", "140px"],
-    backgroundColor: "#020718",
+    backgroundColor: "primary",
     h3: {
       textAlign: "center" as const,
       fontSize: ["23px", null, null, null, null, "30px", "36px"],
@@ -83,6 +83,10 @@ const styles: Record<string, ThemeUICSSObject> = {
     height: ["50px", null, null, "60px"],
     mr: ["0px", null, null, "15px"],
     textAlign: ["center", null, null, "left"],
+
+    "&::placeholder": {
+      color: "gray",
+    },
   },
   button: {
     backgroundColor: "#fff",
