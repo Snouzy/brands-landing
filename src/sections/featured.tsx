@@ -103,7 +103,7 @@ const styles: Record<string, ThemeUICSSObject> = {
     overflowX: ["auto", null, null, null, null, "inherit"],
   },
   tabButtonWrapper: {
-    width: ["700px", null, null, null, null, "100%"],
+    width: "100%",
     mx: ["auto", null, null, null, null, "0"],
     display: "flex",
     justifyContent: "center",
