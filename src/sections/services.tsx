@@ -90,7 +90,9 @@ const Services = () => {
             background: "#48A7FF",
             borderRadius: "20%",
             fill: "white",
-            strokeWidth: 1,
+            path: {
+              strokeWidth: "1px",
+            },
           }}
         />
       ),
@@ -107,7 +109,7 @@ const Services = () => {
             background: "#F5497C",
             borderRadius: "20%",
             fill: "white",
-            strokeWidth: 1,
+            strokeWidth: 0.7,
           }}
         />
       ),

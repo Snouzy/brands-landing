@@ -9,6 +9,7 @@ import PriceCard from "components/cards/price-card";
 
 import priceIcon1 from "assets/price-user-1-1.svg";
 import priceIcon2 from "assets/price-user-1-2.svg";
+import Subscribe from "./subscribe";
 
 export interface Plan {
   recommended: string | null;
@@ -20,12 +21,12 @@ export interface Plan {
     label: string;
   }[];
 }
-const PRICE_MONTHLY_DATA = [
+const BASE_PLAN = [
   {
     recommended: null,
     title: "Gratuit",
     icon: priceIcon1,
-    amount: "0€/an",
+    amount: "-€/an",
     options: [
       {
         status: true,
@@ -62,7 +63,7 @@ const PRICE_MONTHLY_DATA = [
     recommended: null,
     title: "Abonnement 1",
     icon: priceIcon2,
-    amount: "15.000€/an",
+    amount: "--.---€/an",
     options: [
       {
         status: true,
@@ -98,7 +99,7 @@ const PRICE_MONTHLY_DATA = [
     recommended: null,
     title: "Abonnement 2",
     icon: priceIcon2,
-    amount: "21.000€/an",
+    amount: "--.---€/an",
     options: [
       {
         status: true,
@@ -125,86 +126,33 @@ const PRICE_MONTHLY_DATA = [
   },
 ];
 
-const PRICE_YEARLY_DATA = [
-  {
-    recommended: null,
-    title: "For Team pack",
-    icon: priceIcon1,
-    amount: "21.000€/an",
-    options: [
-      {
-        status: true,
-        label: "Ultimate access to all course, exercises and assessments",
-      },
-      {
-        status: true,
-        label:
-          "Free access for all kind of exercise corrections with downloads.",
-      },
-      {
-        status: true,
-        label: "Total assessment corrections with free download access system",
-      },
-      {
-        status: false,
-        label: "Unlimited download of courses on the mobile app contents",
-      },
-      {
-        status: false,
-        label: "Download and print courses and exercises in PDF",
-      },
-    ],
-  },
-  {
-    recommended: "Recommended",
-    title: "For Organization pack",
-    icon: priceIcon2,
-    amount: "199.99/yr",
-    options: [
-      {
-        status: true,
-        label: "Ultimate access to all course, exercises and assessments",
-      },
-      {
-        status: true,
-        label:
-          "Free access for all kind of exercise corrections with downloads.",
-      },
-      {
-        status: true,
-        label: "Total assessment corrections with free download access system",
-      },
-      {
-        status: true,
-        label: "Unlimited download of courses on the mobile app contents",
-      },
-      {
-        status: true,
-        label: "Download and print courses and exercises in PDF",
-      },
-    ],
-  },
-];
-
 const Pricing = () => {
-  const [plan, setPlan] = useState<{ active: string; pricingPlan: Plan[] }>({
-    active: "monthly",
-    pricingPlan: PRICE_MONTHLY_DATA,
+  const [plan, setPlan] = useState<{
+    active: string;
+    pricingPlan: Plan[] | JSX.Element;
+  }>({
+    active: "base",
+    pricingPlan: BASE_PLAN,
   });
 
   const handlePlan = (wanted: string) => {
-    if (wanted === "monthly") {
+    if (wanted === "base") {
       setPlan({
         ...plan,
-        active: "monthly",
-        pricingPlan: PRICE_MONTHLY_DATA,
+        active: "base",
+        pricingPlan: BASE_PLAN,
       });
     }
-    if (wanted === "yearly") {
+    if (wanted === "small") {
       setPlan({
         ...plan,
-        active: "yearly",
-        pricingPlan: PRICE_YEARLY_DATA,
+        active: "small",
+        pricingPlan: (
+          <Subscribe
+            header="Nous avons prévu le coup !"
+            text="Laissez-nous vous contacter pour en savoir plus."
+          />
+        ),
       });
     }
   };
@@ -217,24 +165,31 @@ const Pricing = () => {
         />
         <Box sx={styles.btnWrap}>
           <Button
-            onClick={() => handlePlan("monthly")}
-            className={`${plan.active === "monthly" ? "active" : ""}`}
+            onClick={() => handlePlan("base")}
+            className={`${plan.active === "base" ? "active" : ""}`}
           >
-            Monthly Plan
+            Plan de base
           </Button>
           <Button
-            onClick={() => handlePlan("yearly")}
-            className={`${plan.active === "yearly" ? "active" : ""}`}
+            onClick={() => handlePlan("small")}
+            className={`${plan.active === "small" ? "active" : ""}`}
           >
-            Annual Plan
+            Je suis une petite équipe
           </Button>
         </Box>
 
-        <Grid sx={styles.grid}>
-          {plan.pricingPlan.map((price, index) => (
-            <PriceCard data={price} key={`${plan.active}-card--key${index}`} />
-          ))}
-        </Grid>
+        {Array.isArray(plan.pricingPlan) ? (
+          <Grid sx={styles.grid}>
+            {plan.pricingPlan.map((price, index) => (
+              <PriceCard
+                data={price}
+                key={`${plan.active}-card--key${index}`}
+              />
+            ))}
+          </Grid>
+        ) : (
+          <>{plan.pricingPlan}</>
+        )}
       </Container>
     </Box>
   );
@@ -267,8 +222,7 @@ const styles: Record<string, ThemeUICSSObject> = {
     pb: ["80px", null, null, null, "80px", "100px", "140px"],
   },
   btnWrap: {
-    width: "302px",
-    height: "60px",
+    width: ["100%", "100%", "500px", null, null, null],
     mt: ["-20px", null, null, "0px"],
     mb: ["40px", null, null, "60px"],
     backgroundColor: "#F7F8FB",

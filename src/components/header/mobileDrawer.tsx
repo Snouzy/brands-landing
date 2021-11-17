@@ -51,7 +51,7 @@ const MobileDrawer = () => {
                 spy={true}
                 smooth={true}
                 offset={10}
-                duration={500}
+                duration={300}
                 key={i}
               >
                 {label}

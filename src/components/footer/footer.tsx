@@ -3,7 +3,6 @@
 import React from "react";
 import { Box, Text, Container } from "theme-ui";
 
-import { Link } from "components/link";
 import Logo from "components/logo";
 
 import logoLight from "assets/logo-light.svg";
@@ -12,7 +11,7 @@ export default function Footer() {
   return (
     <Box as="footer" sx={styles.footer}>
       <Container sx={styles.container}>
-        <Box sx={styles.linksWrap}>
+        {/* <Box sx={styles.linksWrap}>
           <Link label="home" path="/">
             Accueil
           </Link>
@@ -25,7 +24,7 @@ export default function Footer() {
           <Link label="FAQ" path="/">
             FAQ
           </Link>
-        </Box>
+        </Box> */}
         <Box
           sx={{
             display: "flex",
