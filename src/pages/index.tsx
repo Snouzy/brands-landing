@@ -25,11 +25,8 @@ const Home: NextPage = () => {
           <Layout>
             <SEO title="Vazee BRANDS" />
             <Banner />
-            <Services />
             <Subscribe />
             <Featured />
-            <Pricing />
-            <Subscribe />
           </Layout>
         </ThemeProvider>
       </StickyProvider>
