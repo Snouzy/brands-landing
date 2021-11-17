@@ -19,6 +19,7 @@ import theme from "theme";
 
 import type { NextPage } from "next";
 import { TOAST_AUTOCLOSE } from "constants/toast";
+import Pricing from "sections/pricing";
 
 const Home: NextPage = () => (
   <AppProvider>
@@ -26,9 +27,13 @@ const Home: NextPage = () => (
       <Layout>
         <SEO title="Vazee BRANDS" />
         <Banner />
-        <Subscribe />
+        <Subscribe
+          header="Soyez informé du lancement officiel"
+          text="Et bénéficiez de 20% de réduction à vie !"
+        />
         <Services />
         <Featured />
+        <Pricing />
       </Layout>
       <ToastContainer autoClose={TOAST_AUTOCLOSE} closeOnClick />
     </ThemeProvider>

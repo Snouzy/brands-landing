@@ -5,8 +5,18 @@ const HeaderData = [
   },
 
   {
+    path: "services",
+    label: "Services",
+  },
+
+  {
     path: "objectives",
     label: "Objectifs",
+  },
+
+  {
+    path: "pricing",
+    label: "Prix",
   },
 ];
 

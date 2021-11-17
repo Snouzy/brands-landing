@@ -15,7 +15,11 @@ import * as AppActions from "contexts/app/app.actions";
 import { useAppContext } from "contexts/app/app.provider";
 import { REGEXS } from "validators/regex";
 
-const Subscribe = () => {
+interface Props {
+  header: string;
+  text: string;
+}
+const Subscribe = ({ header, text }: Props) => {
   const [email, setEmail] = React.useState<string>("");
   const { dispatch, state } = useAppContext();
   const handleSubmit = React.useCallback(
@@ -37,8 +41,8 @@ const Subscribe = () => {
   return (
     <Box as="section" sx={styles.subscribe}>
       <Container>
-        <Heading as="h3">Soyez informé du lancement officiel</Heading>
-        <Text as="p">Et bénéficiez de 20% de réduction à vie !</Text>
+        <Heading as="h3">{header}</Heading>
+        <Text as="p">{text}</Text>
         <Box as="form" sx={styles.form} onSubmit={handleSubmit}>
           <Box as="label" variant="styles.srOnly">
             Email
