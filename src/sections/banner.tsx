@@ -170,9 +170,13 @@ const styles = {
   bannerIcon1: {
     top: "10%",
     left: "10%",
+    height: 70,
+    width: 70,
     animation: `${bannerAnim2} 8s linear infinite`,
   },
   bannerIcon2: {
+    height: 70,
+    width: 70,
     top: "10%",
     right: "10%",
     animation: `${bannerAnim2} 8s linear infinite`,

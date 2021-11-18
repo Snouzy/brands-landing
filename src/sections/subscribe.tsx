@@ -39,7 +39,7 @@ const Subscribe = ({ header, text }: Props) => {
   );
 
   return (
-    <Box as="section" sx={styles.subscribe}>
+    <Box as="section" sx={styles.subscribe} id="subscribe">
       <Container>
         <Heading as="h3">{header}</Heading>
         <Text as="p">{text}</Text>

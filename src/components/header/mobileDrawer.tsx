@@ -58,12 +58,6 @@ const MobileDrawer = () => {
               </ScrollLink>
             ))}
           </Box>
-
-          <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button}>
-              Nous contacter
-            </Button>
-          </Box>
         </Box>
       </Scrollbars>
     </Drawer>

@@ -22,8 +22,6 @@ const Services = () => {
         <MdCreateNewFolder
           size={80}
           sx={{
-            padding: 10,
-
             fill: "#d4e8f2",
           }}
         />
@@ -37,8 +35,6 @@ const Services = () => {
         <IoIosEye
           size={80}
           sx={{
-            padding: 10,
-
             fill: "#d4e8f2",
           }}
         />
@@ -52,8 +48,6 @@ const Services = () => {
         <GiHumanTarget
           size={80}
           sx={{
-            padding: 10,
-
             fill: "#d4e8f2",
           }}
         />
@@ -67,8 +61,6 @@ const Services = () => {
         <DiGoogleAnalytics
           size={80}
           sx={{
-            padding: 10,
-
             fill: "#d4e8f2",
           }}
         />
@@ -82,9 +74,7 @@ const Services = () => {
         <HiOutlineIdentification
           size={90}
           sx={{
-            padding: 10,
             stroke: "white",
-            borderRadius: "20%",
             fill: "#d4e8f2",
             path: {
               strokeWidth: "1px",
